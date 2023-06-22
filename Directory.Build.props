@@ -1,0 +1,46 @@
+<Project>
+    <PropertyGroup>
+        <CodeAnalysisRuleSet>$(MSBuildThisFileDirectory)dotnet.ruleset</CodeAnalysisRuleSet>
+        <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+        <CodeAnalysisTreatWarningsAsErrors>false</CodeAnalysisTreatWarningsAsErrors>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <NoDefaultExcludes>true</NoDefaultExcludes>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Roslynator.Analyzers" Version="4.3.0">
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+          <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+        <PackageReference Include="Roslynator.CodeAnalysis.Analyzers" Version="4.3.0">
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+          <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+        <PackageReference Include="Roslynator.Formatting.Analyzers" Version="4.3.0">
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+          <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+        <PackageReference Include="Marten" Version="6.0.1" />
+        <PackageReference Include="Serilog" Version="2.12.0" />
+        <PackageReference Include="Serilog.Settings.Configuration" Version="7.0.0" />
+        <PackageReference Include="System.Composition.AttributedModel" Version="7.0.0" />
+        <PackageReference Include="Serilog.Sinks.Async" Version="1.5.0" />
+        <PackageReference Include="Serilog.Sinks.Console" Version="4.1.0" />
+        <PackageReference Include="Serilog.Exceptions" Version="8.4.0" />
+        <PackageReference Include="Serilog.Extensions.Hosting" Version="7.0.0" />
+        <PackageReference Include="SerilogAnalyzer" Version="0.15.0" />
+        <PackageReference Include="WolverineFx" Version="1.0.0" />
+        <PackageReference Include="WolverineFx.Marten" Version="1.0.0" />
+        <PackageReference Include="WolverineFx.MemoryPack" Version="1.0.0" />
+        <PackageReference Include="WolverineFx.RabbitMQ" Version="1.0.0" />
+        <PackageReference Include="Be.Vlaanderen.Basisregisters.Generators.Guid.Deterministic" Version="3.0.1" />
+        <PackageReference Include="Binance.Net" Version="8.6.3" />
+        <PackageReference Include="StronglyTypedId" Version="1.0.0-beta06" />
+        <PackageReference Include="NetEscapades.EnumGenerators" Version="1.0.0-beta08" />
+        <AdditionalFiles Include="$(MSBuildThisFileDirectory).editorconfig" Link="Properties\.editorconfig" />
+    </ItemGroup>
+    <!-- <ItemGroup> -->
+    <!--     <Using Include="System.Guid" Alias="DefaultIdType" /> -->
+    <!-- </ItemGroup> -->
+</Project>

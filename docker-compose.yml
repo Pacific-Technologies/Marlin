@@ -1,0 +1,19 @@
+volumes:
+  rabbitmq_data:
+    driver: local
+
+services:
+  rabbitmq:
+    image: rabbitmq:latest
+    ports:
+      - '4369:4369'
+      - '5551:5551'
+      - '5552:5552'
+      - '5672:5672'
+      - '25672:25672'
+      - '15672:15672'
+    environment:
+      - RABBITMQ_DEFAULT_USER=rabbit
+      - RABBITMQ_DEFAULT_PASS=changeme
+    volumes:
+      - 'rabbitmq_data:/bitnami/rabbitmq/mnesia'
